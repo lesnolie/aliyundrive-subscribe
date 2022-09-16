@@ -8,9 +8,9 @@ config/app.ini
 [app]
 app-http-port      = 8002
 # 用户名
-app-auth-pass      = admin
-# 密码
 app-auth-user      = admin
+# 密码
+app-auth-pass      = admin
 # 数据库 (mysql/sqlite3) mysql root:pass@tcp(ip:port)/database?charset=utf8&parseTime=True&loc=Local
 app-database       = conf/data.db
 # 订阅检查周期: @every 30m(30分钟); @every 1h(1小时) - 不要太频繁
