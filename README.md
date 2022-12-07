@@ -2,6 +2,8 @@
 
 【阿里云盘订阅】，主要用于云盘分享链最新资源转存、重命名、下载、资源管理等
 
+> docker pull looby/aliyundrive-subscribe:latest
+
 配置说明：
 config/app.ini
 ```ini
