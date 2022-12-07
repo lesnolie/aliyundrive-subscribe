@@ -25,8 +25,8 @@ app-cache-dir      = conf/cache
 app-dingding-robot = [app-dingding-robot]
 # 钉钉机器人附带外链播放地址, 为当前服务访问地址
 app-play-url       = http://10.0.1.18:8002
-# 授权 暂时防止后面不可控因素，目前到2023年1月1日，到期会发新的，稳定后会移除这个限制
-app-authorize      = jdFUzT8m5rKgzaBb7/W8/pgIH66U1GjMQlGRT3rHg/o=
+# 腾讯HiFlow通知
+app-notify-hiflow  = https://api.hiflow.tencent.com/engine/webhook/31/1597044003551531111
 
 [aliyundrive]
 # 云盘refresh-token
@@ -91,8 +91,7 @@ aria2-rpc-enable       = false
 
 【通知配置】
 - 钉钉机器人：多个Token逗号隔开(英文,)
-
-注：有其它免费通知欢迎提出（免费次数多或者不限制哦）
+- 腾讯HiFlow（见wiki）
 
 ![云盘设置](./screenshots/shezhi.jpg)
 ![云盘通知](./screenshots/tongzhi.jpg)
