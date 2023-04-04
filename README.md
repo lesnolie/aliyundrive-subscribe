@@ -4,6 +4,8 @@
 
 > docker pull looby/aliyundrive-subscribe:latest
 
+[Wiki](https://github.com/adminpass/aliyundrive-subscribe/wiki)
+
 配置说明：
 config/app.ini
 ```ini
@@ -43,6 +45,12 @@ aria2-rpc-secret       = P3TERX
 aria2-rpc-download-dir = /downloads
 # aria2是否启用下载
 aria2-rpc-enable       = false
+
+[emby]
+# emby 服务地址
+emby-server-url   = 
+# emby api密钥
+emby-server-token = 
 ```
 
 ### 最新记录
