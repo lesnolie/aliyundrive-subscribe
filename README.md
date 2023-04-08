@@ -51,6 +51,12 @@ aria2-rpc-enable       = false
 emby-server-url   = 
 # emby api密钥
 emby-server-token = 
+
+[plex]
+# plex 服务地址
+plex-server-url   = 
+# plex auth token
+plex-server-token = 
 ```
 
 ### 最新记录
