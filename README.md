@@ -15,48 +15,69 @@ app-http-port      = 8002
 app-auth-user      = admin
 # 密码
 app-auth-pass      = admin
-# 数据库 (mysql/sqlite3) mysql root:pass@tcp(ip:port)/database?charset=utf8&parseTime=True&loc=Local
+# mysql root:pass@tcp(ip:port)/database?charset=utf8&parseTime=True&loc=Local
 app-database       = conf/data.db
 # 订阅检查周期: @every 30m(30分钟); @every 1h(1小时) - 不要太频繁
-app-check-interval = @every 30m
+app-check-interval = @every 1h
 # 订阅检查并发数
-app-max-procs      = 10
+app-max-procs      = 1
+# 订阅更新检查延迟(秒, 0.不限制)
+app-check-delay    = 5
+# 下载任务提交延迟(秒, 0.不限制)
+app-download-delay = 3
 # 缓存，在线播放m3u8资源目录, 会4小时自动清除
 app-cache-dir      = conf/cache
 # 钉钉机器人通知
-app-dingding-robot = [app-dingding-robot]
-# 钉钉机器人附带外链播放地址, 为当前服务访问地址
-app-play-url       = http://10.0.1.18:8002
+app-dingding-robot = 
 # 腾讯HiFlow通知
 app-notify-hiflow  = https://api.hiflow.tencent.com/engine/webhook/31/1597044003551531111
+app-play-url       = http://127.0.0.1:8002
+# 识别正则
+app-episode-regex  = E\d{1,4}|EP\d{1,4}|第\d{1,4}话|第\d{1,4}集|第\d{1,4}期|_\d{1,4}_|\d{1,4}\s|\[\d{1,4}\]|\d{1,4}-4K|【\d{1,4}】
 
 [aliyundrive]
 # 云盘refresh-token
-aliyundrive-refresh-token = [refresh-token]
+aliyundrive-refresh-token =
+# 云盘open refresh-token
+aliyundrive-open-refresh-token =
+# 云盘open oauth地址
+aliyundrive-open-oauth    =
 # 云盘资源根目录（默认root），建议设置一个单独目录
-aliyundrive-root          = root
+aliyundrive-root           = root
+# 默认空间(0.资源库 1.备份盘), 默认0
+aliyundrive-drive-type  = 0
+# 收藏目录id
+aliyundrive-folders       =
+# 模拟设备名
+aliyundrive-device-name   = Chrome浏览器
+aliyundrive-model-name    = Windows网页版
+# 自动签到 true:开启 false:关闭
+aliyundrive-sign-in       = false
+# 自动签到延迟范围(秒, 范围内随即执行), 默认0点2分开始执行
+aliyundrive-sign-delay    = 120
 
 [aria2rpc]
-# aria2地址（仅支持http）
-aria2-rpc-url          = http://10.0.1.14:6800/jsonrpc
-# aria2秘钥，没有留空
+aria2-rpc-url          = http://127.0.0.1:6800/jsonrpc
 aria2-rpc-secret       = P3TERX
-# aria2下载根目录，所有下载都在这个目录下
+# 下载根目录
 aria2-rpc-download-dir = /downloads
-# aria2是否启用下载
+# 下载常用子目录(多个换行)
+aria2-rpc-common-dirs  =
 aria2-rpc-enable       = false
 
 [emby]
-# emby 服务地址
-emby-server-url   = 
-# emby api密钥
-emby-server-token = 
+emby-server-url   =
+emby-server-token =
+emby-server-delay = 0
 
 [plex]
-# plex 服务地址
-plex-server-url   = 
-# plex auth token
-plex-server-token = 
+plex-server-url   =
+plex-server-token =
+plex-server-delay = 0
+
+[notify]
+notify-send-url  =
+notify-send-body =
 ```
 
 ### 最新记录
